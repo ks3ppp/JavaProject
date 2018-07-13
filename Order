@@ -1,0 +1,77 @@
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+//class restaurant {
+//	int tablenum;
+//	String[] orderMenu = {"불고기버거","치킨버거","새우버거","스페셜버거"};
+//	int price[] = {15,15,15,20};
+//	int Orderednum;
+//	int total =0;
+//	void getTotalPrice(int i) {
+//		total = total + price[i-1];
+//		System.out.println(total);
+//	}
+//	void getOrdernum(int p) {
+//		System.out.println(orderMenu[p-1]);
+//	}
+//	
+//}
+public class order {
+	
+	void load() throws IOException {
+		String filePath = "c:/test/order.txt";
+		
+		
+		FileReader fr = new FileReader(filePath);
+		BufferedReader br = new BufferedReader(fr);
+		String [] lineContents;
+		String line = null;
+		while((line = br.readLine()) !=null) {
+			lineContents = line.split(",");
+			System.out.println(lineContents[1]);
+		}
+		br.close();
+		fr.close();
+			
+	}
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		order o = new order();
+		o.load();
+		
+			
+//		restaurant r = new restaurant();
+//		
+//		Scanner sc = new Scanner(System.in);
+//		int x;
+//		while(true) {
+//			x = sc.nextInt();
+//			switch(x) {
+//			case 1:
+//				r.getTotalPrice(x);
+//				r.getOrdernum(x);
+//				break;
+//			case 2:
+//				r.getTotalPrice(x);
+//				r.getOrdernum(x);
+//				break;
+//			case 3:
+//				r.getTotalPrice(x);
+//				r.getOrdernum(x);
+//				break;
+//			case 4:
+//				r.getTotalPrice(x);
+//				r.getOrdernum(x);
+//				break;
+//			
+//			}
+//		}
+		
+		
+	}
+
+}
